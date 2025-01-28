@@ -7,12 +7,11 @@ import vercel from '@astrojs/vercel/serverless';
 export default defineConfig({
 	output: 'server',
 	adapter: vercel({
+		imageService: true,
 		webAnalytics: {
-		  enabled: true,
+		  enabled: false,
 		},
-		maxDuration: 8,
-	  }),	
-	  integrations: [
+	  }),	  integrations: [
 		starlight({
 			title: 'My Docs',
 			social: {
